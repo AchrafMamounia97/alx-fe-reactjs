@@ -1,6 +1,3 @@
-import { createContext } from "react";
-
-// Create a Context object for user data
-const UserContext = createContext(null);
+const UserContext = React.createContext();
 
 export default UserContext;
