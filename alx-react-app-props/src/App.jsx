@@ -1,11 +1,10 @@
 import ProfilePage from './ProfilePage';
-import UserContext from './UserContext';   // ✅ Import context
+import UserContext from './UserContext';
 
 function App() {
   const userData = { name: "Jane Doe", email: "jane.doe@example.com" };
 
   return (
-    // ✅ Wrap ProfilePage inside UserContext.Provider
     <UserContext.Provider value={userData}>
       <ProfilePage />
     </UserContext.Provider>
@@ -13,4 +12,3 @@ function App() {
 }
 
 export default App;
-
