@@ -1,6 +1,7 @@
-import { createContext } from "react";
+import React from "react";
 
-// ✅ Must match checker expectations exactly
-const UserContext = createContext();
+// ✅ Initialize a Context using React.createContext()
+const UserContext = React.createContext();
 
+// ✅ Export the context
 export default UserContext;
