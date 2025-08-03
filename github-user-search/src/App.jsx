@@ -33,7 +33,9 @@ function App() {
       <div>
         <h1>GitHub User Search Application</h1>
         <p>This is the initial layout for the application.</p>
-        <Search />
+        <div className="min-h-screen bg-gray-100">
+          <Search />
+        </div>
       </div>
     </>
   )
