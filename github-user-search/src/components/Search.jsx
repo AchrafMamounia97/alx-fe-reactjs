@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { advancedUserSearch } from '../services/githubService';
+import { fetchUserData } from '../services/githubService'; // 🔁 Renamed here
 
 function Search() {
   const [username, setUsername] = useState('');
@@ -16,7 +16,7 @@ function Search() {
     setResults([]);
 
     try {
-      const users = await advancedUserSearch(username, location, minRepos);
+      const users = await fetchUserData(username, location, minRepos); // 🔁 Called here
       setResults(users);
     } catch (err) {
       setError(true);
