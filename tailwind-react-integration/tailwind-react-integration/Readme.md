@@ -10,13 +10,3 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-## My React Project with Tailwind CSS
-
-
-## Steps
-1. Installed Tailwind CSS, PostCSS, and Autoprefixer.
-2. Created Tailwind and PostCSS configuration files.
-3. Added Tailwind directives to the main CSS file.
-4. Verified Tailwind classes are working in the app.
-
