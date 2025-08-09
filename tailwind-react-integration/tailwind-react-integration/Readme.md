@@ -13,4 +13,10 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## My React Project with Tailwind CSS
 
-This project is a React application styled using Tailwind CSS.
+
+## Steps
+1. Installed Tailwind CSS, PostCSS, and Autoprefixer.
+2. Created Tailwind and PostCSS configuration files.
+3. Added Tailwind directives to the main CSS file.
+4. Verified Tailwind classes are working in the app.
+
