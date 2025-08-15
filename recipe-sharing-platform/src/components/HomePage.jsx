@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
-import recipes from "../public/data.json";
+import recipesData from "../../src/data.json"; // Import directly
 
 const HomePage = () => {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    // Fetch the data from the local JSON file
-    fetch("/data.json")
-      .then((res) => res.json())
-      .then((data) => setRecipes(data))
-      .catch((error) => console.error("Error loading recipes:", error));
+    // Simulate fetching data by setting state from the imported JSON
+    setRecipes(recipesData);
   }, []);
 
   return (
@@ -41,3 +38,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
