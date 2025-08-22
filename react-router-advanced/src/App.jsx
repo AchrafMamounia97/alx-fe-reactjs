@@ -1,17 +1,11 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
 import ProfileDetails from "./components/ProfileDetails";
 import ProfileSettings from "./components/ProfileSettings";
 import Post from "./components/Post";
-import BlogPost from "./components/BlogPost"; // Import BlogPost component
-
-// Simulated authentication state
-const isAuthenticated = false; // Change to true to simulate logged-in user
-
-function ProtectedRoute({ children }) {
-  return isAuthenticated ? children : <Navigate to="/" replace />;
-}
+import BlogPost from "./components/BlogPost";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
