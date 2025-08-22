@@ -19,6 +19,9 @@ function PostsComponent() {
     queryKey: ['posts'],
     queryFn: fetchPosts,
     staleTime: 1000 * 60, // 1 minute
+    cacheTime: 1000 * 60 * 5, // 5 minutes
+    refetchOnWindowFocus: true,
+    keepPreviousData: true,
   });
 
   return (
