@@ -2,18 +2,17 @@
 import React, { useState } from 'react';
 
 const RegistrationForm = () => {
-  const [form, setForm] = useState({ username: '', email: '', password: '' });
-  const [errors, setErrors] = useState({});
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState({});
 
   const validate = () => {
     const newErrors = {};
-    if (!form.username) newErrors.username = 'Username required';
-    if (!form.email) newErrors.email = 'Email required';
-    if (!form.password) newErrors.password = 'Password required';
+    if (!username) newErrors.username = 'Username required';
+    if (!email) newErrors.email = 'Email required';
+    if (!password) newErrors.password = 'Password required';
     return newErrors;
   };
 
@@ -33,17 +32,17 @@ const RegistrationForm = () => {
     <form onSubmit={handleSubmit}>
       <div>
         <label>Username:</label>
-        <input name="username" value={form.username} onChange={handleChange} />
+        <input name="username" value={username} onChange={e => setUsername(e.target.value)} />
         {errors.username && <span>{errors.username}</span>}
       </div>
       <div>
         <label>Email:</label>
-        <input name="email" value={form.email} onChange={handleChange} />
+        <input name="email" value={email} onChange={e => setEmail(e.target.value)} />
         {errors.email && <span>{errors.email}</span>}
       </div>
       <div>
         <label>Password:</label>
-        <input name="password" type="password" value={form.password} onChange={handleChange} />
+        <input name="password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
         {errors.password && <span>{errors.password}</span>}
       </div>
       <button type="submit">Register</button>
