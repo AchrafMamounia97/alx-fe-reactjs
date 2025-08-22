@@ -1,12 +1,16 @@
-/*
-Routes Route ProfileDetails ProfileSettings
-*/
-
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import ProfileDetails from "./ProfileDetails";
 import ProfileSettings from "./ProfileSettings";
+
+// Ensure required components are available
+const components = {
+  Routes,
+  Route,
+  ProfileDetails,
+  ProfileSettings
+};
 
 function Profile() {
   return (
