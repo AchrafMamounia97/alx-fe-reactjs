@@ -13,6 +13,7 @@ function PostsComponent() {
     error,
     isLoading,
     isFetching,
+    isError,
     refetch,
   } = useQuery({
     queryKey: ['posts'],
@@ -28,7 +29,7 @@ function PostsComponent() {
       </button>
       {isLoading ? (
         <p>Loading...</p>
-      ) : error ? (
+      ) : isError ? (
         <p>Error: {error.message}</p>
       ) : (
         <ul>
