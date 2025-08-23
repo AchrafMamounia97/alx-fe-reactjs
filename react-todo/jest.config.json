@@ -1,12 +1,12 @@
 {
   "testEnvironment": "jsdom",
-  "transform": {
-    "^.+\\.[t|j]sx?$": "babel-jest"
-  },
+  "moduleFileExtensions": ["js", "jsx"],
   "moduleNameMapper": {
-    "\\.(css|less|sass|scss)$": "identity-obj-proxy"
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy"
   },
-  "setupFilesAfterEnv": [
-    "@testing-library/jest-dom"
-  ]
+  "testMatch": ["**/__tests__/**/*.js", "**/?(*.)+(spec|test).js?(x)"],
+  "transform": {
+    "^.+\\.(js|jsx)$": "babel-jest"
+  },
+  "setupFilesAfterEnv": ["./src/setupTests.js"]
 }
